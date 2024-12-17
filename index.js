@@ -1,17 +1,19 @@
 export function process(input) {
-  if (!input) return;
-
-  nested();
+  let state;
 
   if (!input) return;
 
   nested();
 
-  if (input) return;
+  if (!state) return;
 
-  return;
+  nested();
+
+  if (state) return;
+
+  return {};
 
   function nested() {
-    input = 1;
+    state = state ? 0 : 1;
   }
 }
