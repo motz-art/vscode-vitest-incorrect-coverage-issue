@@ -1,24 +1,17 @@
 export function process(input) {
-  let state;
-
-  if (!input) return {};
-
-  toggleState();
-
-  if (!state) return {};
+  if (!input) return;
 
   nested();
 
-  if (state) undefined;
+  if (!input) return;
 
-  return {};
+  nested();
+
+  if (input) return;
+
+  return;
 
   function nested() {
-    toggleState();
-    return {};
-  }
-
-  function toggleState() {
-    state = state ? 0 : 1;
+    input = 1;
   }
 }
